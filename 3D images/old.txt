@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <!-- include A-Frame obviously -->
+		<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+		<!-- include ar.js for A-Frame -->
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> 
+    </head>
+    <body style='margin: 0px; overflow: hidden;'>
+        <a-scene embedded arjs>
+            <a-assets>
+                <a-asset-item id="jag" src="source/model.obj"></a-asset-item>
+                <a-asset-item id="jag_mtl" src="source/model.mtl"></a-asset-item>
+            </a-assets>
+
+            <a-marker type="pattern" url="pattern-lego.patt">
+                <a-entity obj-model="obj: #jag; mtl: #jag_mtl" position="0 0 0" rotation="60 0 0" scale="0.300 0.300 0.300 ">
+                    <a-text value="Christ the Redeemer" height="15" width="15" align="center" rotation="-90 0 0" color="white" position= "0 -0.9 0"></a-text>
+                    
+                </a-entity>
+                <a-text value="\n Gamlath G.R.G.K \n MTIT  \n IT18126402" height="3" width="3" align="center" rotation="-90 0 0" color="red" position= "0 -0.3 0"></a-text>
+            </a-marker>  
+            <a-entity camera></a-entity>  
+        </a-scene>
+    </body>
+</html>

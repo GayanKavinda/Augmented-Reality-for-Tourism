@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- include A-Frame obviously -->
+		<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+		<!-- include ar.js for A-Frame -->
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs>
+			<a-assets>
+			    <a-asset-item id="jag" src="Arena/Arena.obj"></a-asset-item>
+		        <a-asset-item id="jag_mtl" src="Arena/Arena.mtl"></a-asset-item>
+	        </a-assets>
+
+	    <a-marker type="pattern" url="pattern-lego.patt">
+		    <a-entity obj-model="obj: #jag; mtl: #jag_mtl" position="0 0 0" rotation="-90 0 0" scale="0.02 0.02 0.02">
+		
+		
+	</a-entity>
+        <a-text value="\n \n \n \n \n \n \n \n Gamlath G.R.G.K \n Arena\n IT18126402" height="3" width="3" align="center" rotation="-90 0 0" color="red" position= "0 -0.3 0"></a-text>
+    </a-marker>
+
+        <a-assets>
+            <a-asset-item id="jag1" src="tajmahal.obj"></a-asset-item>
+            <a-asset-item id="jag1_mtl" src="tajmahal.3ds"></a-asset-item>
+        </a-assets>
+
+    <a-marker type="pattern" url="pattern-home.patt">
+        <a-entity obj-model="obj: #jag1; mtl: #jag1_mtl" position="0 0 0" rotation="-90 00 00" scale="0.002 0.002 0.002 ">
+    
+    
+    </a-entity>
+        <a-text value="\n \n \n \n \n \n \n \n  \n Taj Mahal\n IT18184440 \n T.E.Kahawandala" height="3" width="3" align="center" rotation="-90 00 0" color="red" position= "0 -0.3 0"></a-text>
+    </a-marker>
+
+
+        <a-assets>
+            <a-asset-item id="jag2" src="model/model.obj"></a-asset-item>
+        <a-asset-item id="jag2_mtl" src="model/model.mtl"></a-asset-item>
+        </a-assets>
+    <a-marker type="pattern" url="pattern-kanji.patt">
+        <a-entity obj-model="obj: #jag2; mtl: #jag2_mtl" position="0 0 0" rotation="-270 200 0" scale="1 1 1 1">
+
+    
+    </a-entity>
+        <a-text value="\n Statue of Liberty \n IT18159622 \n Samaranayake Y.H.R.C.S \n" height="3" width="3" align="center" rotation="-90 0 0" color="red" position= "0 -0.3 0"></a-text>
+    </a-marker>
+
+
+        <a-assets>
+            <a-asset-item id="jag3" src="πιζα.obj"></a-asset-item>
+        <a-asset-item id="jag3_mtl" src="πιζα.mtl"></a-asset-item>
+        </a-assets>
+        <a-marker type="pattern" url="pattern-marker.patt">
+        <a-entity obj-model="obj: #jag3; mtl: #jag3_mtl" position="0 0 0" rotation="-140 0 0" scale="0.1 0.1 0.1">
+
+    
+    </a-entity>
+        <a-text value="\n \n \n \n \n \n \n P.C.A.Silva \n Leaning Tower of Pisa  \n IT18008906" height="3" width="3" align="center" rotation="-90 0 0" color="red" position= "0 -0.3 0"></a-text>
+    </a-marker>
+
+<a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
